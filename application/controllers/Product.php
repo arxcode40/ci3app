@@ -29,7 +29,7 @@ class Product extends CI_Controller {
 		);
 		$this->form_validation->set_rules(
 			'quantity', 'jumlah produk',
-			array('integer', 'required', 'trim')
+			array('greater_than_equal_to[0]', 'integer', 'required', 'trim')
 		);
 		$this->form_validation->set_rules(
 			'price', 'harga produk',
@@ -68,7 +68,7 @@ class Product extends CI_Controller {
 		);
 		$this->form_validation->set_rules(
 			'quantity', 'jumlah produk',
-			array('integer', 'required', 'trim')
+			array('greater_than_equal_to[0]', 'integer', 'required', 'trim')
 		);
 		$this->form_validation->set_rules(
 			'price', 'harga produk',
